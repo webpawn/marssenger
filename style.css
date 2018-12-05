@@ -17,6 +17,12 @@
 .font_16{
     font-size:16px!important;
 }
+.font_20{
+    font-size:20px;
+}
+.font_24{
+    font-size:24px;
+}
 a:hover{
     color:#333;
     text-decoration:none;
@@ -67,23 +73,89 @@ div.row>div.col-lg-2>ul>li>a{
 /*主页背景轮播样式*/
 .bg_img{
     width:100%;
-    height:825px;
+    height:220px;
+}
+.bg_img>img{
+    width:100%;
+    height:100%;
+}
+.bg_video{
+    width:100%;
+    height:100%;
+    object-fit: fill;
+}
+.bg_text {
+    margin-top:100px;
+}
+@media screen and (min-width:300px){
+    .bg_img{
+        height:220px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px){
+    .bg_img{
+        height:450px;
+    }
 }
 @media screen and (min-width:991px){
-   .bg_img{
+    .bg_img{
         position:absolute;
         top:0;
         left:0;
-        z-index: -1;
-   }
+        height:600px;
+        z-index:-1;
+    }
+    /*.my_img{*/
+        /*/!*z-index: -1;*!/*/
+    /*}*/
+    /*.my_video{*/
+        /*z-index:0;*/
+    /*}*/
 }
-@media screen and (max-width:990px){
-    .bg_img{
-        height:400px;
-        padding-top: 20px;
+@media screen and (min-width:1025px){
+    .bg_img {
+        height: 825px;
     }
 }
-.bg_img>img{
-    min-height:20%;
+@media screen and (max-width:990px){
+    .bg_text{
+        display:none;
+    }
+}
+@media screen and (max-width:1100px){
+    .bg_text {
+        margin-top:60px;
+    }
+}
+/*主页主体内容样式*/
+.img_box{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+@media screen and (min-width:991px){
+    .img_box{
+        width:20%;
+        height:70px;
+        background-image: url("../img/index-nav-icon1.jpg");
+        background-size: contain;
+    }
+
+}
+@media screen and (max-width:990px){
+    .img_box{
+        width:40%;
+        height:150px;
+        background-image: url("../img/img3.jpg");;
+    }
+    .text_box{
+        width:60%;
+        height:150px;
+        text-align: center;
+        padding-top:20px ;
+        background-image: url("../img/timg.jpg");
+        background-size: cover;
+    }
+
 }
 
