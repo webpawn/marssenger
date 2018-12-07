@@ -7,6 +7,9 @@
 .color_999{
     color:#999;
 }
+.color_golden{
+    color:#3e280c;
+}
 .font_12{
     font-size:12px!important;
 }
@@ -47,7 +50,6 @@ input.my_input:nth-child(2){
 }
 .search_bg{
     border:0;
-    background:url(img)
 }
 /*µ×²¿ÑùÊ½*/
 div.row>div.col-lg-2>ul>li>a{
@@ -140,21 +142,70 @@ div.row>div.col-lg-2>ul>li>a{
         background-image: url("../img/index-nav-icon1.jpg");
         background-size: contain;
     }
-
+    .my_section_pic2{
+        width:18%;
+        background-image:url("../img/index-nav-icon1.jpg")
+    }
+    .my_section_pic3{
+        background-image:url("../img/index-nav-icon2.jpg")
+    }
+    .my_section_pic4{
+       height: 40px; margin-top: 15px;
+        background-image:url("../img/index-nav-icon3.jpg")
+    }
+    div.text_box{
+        padding-left:15px;
+    }
+    div.text_box>p:last-child{
+        font-size: 14px;
+        color:#555;
+    }
+    .my_section_pic4+div.text_box{
+        padding-left:0;
+    }
+    div.text_box>p:nth-child(2){
+        color:#555;
+        font-size: 18px;
+        padding-top:10px;
+    }
+    .only_border{
+        border-left:1px solid #eee;
+        border-right:1px solid #eee;
+    }
 }
 @media screen and (max-width:990px){
     .img_box{
         width:40%;
         height:150px;
-        background-image: url("../img/img3.jpg");;
+    }
+    .my_section_pic1{
+        background-image:url("../img/img1.jpg")
+    }
+    .my_section_pic2{
+        background-image:url("../img/img2.jpg")
+    }
+    .my_section_pic3{
+        background-image:url("../img/img3.jpg")
+    }
+    .my_section_pic4{
+        background-image:url("../img/img4.jpg")
     }
     .text_box{
         width:60%;
         height:150px;
         text-align: center;
-        padding-top:20px ;
-        background-image: url("../img/timg.jpg");
+        padding-top:30px ;
+        /*background-image: url("../img/text_bg1.jpg");*/
         background-size: cover;
+        border:1px solid white;
+        box-shadow:2px 2px 20px -8px #999999;
+        color:#3e280c;
+    }
+    .text_box>p:last-child{
+        font-size: 12px;
+    }
+    div.row>div{
+        padding:0;
     }
 
 }
