@@ -1,3 +1,6 @@
+.row{margin:0;}
+/*.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{padding:0;}*/
+.container{padding:0;}
 .color_333{
     color:#333;
 }
@@ -52,6 +55,15 @@ input.my_input:nth-child(2){
     border:0;
 }
 /*底部样式*/
+footer>div:last-child{
+    height:88px;
+    width:100%;
+    background:#eee;
+}
+footer>div:last-child:before{
+    display: table;
+    content: "";
+}
 div.row>div.col-lg-2>ul>li>a{
     font-size:12px;
     color:#888;
@@ -63,13 +75,23 @@ div.row>div.col-lg-2>ul>li>a{
     .my_coll_content{
         display:block!important;
     }
+    footer>div:last-child>div.container{
+        margin-top:33px;
+    }
 }
 @media screen and (max-width:990px){
     .my_coll_button{
         /*display:block;*/
         position:absolute;
-        top:-3px;
+        top:12px;
         right:8px;
+    }
+    footer>div>div.row>div>ul>li{
+        padding-top:13px;
+        padding-left:10px;
+    }
+    footer>div:last-child>div.container{
+        margin-top:10px;
     }
 }
 /*主页背景轮播样式*/
@@ -89,6 +111,44 @@ div.row>div.col-lg-2>ul>li>a{
 .bg_text {
     margin-top:100px;
 }
+.bg_text>a{
+    display:inline-block;
+    width:135px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #9c9b9a;
+    border-radius:20px;
+    background: transparent;
+    color:#666;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 100px;
+}
+#index_carousel>ul>li{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: #ffffff;
+    margin-right:25px;
+    cursor: pointer;
+}
+#index_carousel>ul>li.active{
+    background: #999;
+}
+#index_carousel>a{
+    background:rgba(0,0,0,0.3);
+    width:3%;
+    height:20%;
+    top:40%;
+    border-radius:5px;
+}
+#index_carousel>a.carousel-control-prev{
+    left:8px;
+}
+#index_carousel>a.carousel-control-next{
+    right:8px;
+}
 @media screen and (min-width:300px){
     .bg_img{
         height:220px;
@@ -107,6 +167,9 @@ div.row>div.col-lg-2>ul>li>a{
         height:600px;
         z-index:-1;
     }
+    #index_carousel>a{
+        display:none;
+    }
     /*.my_img{*/
         /*/!*z-index: -1;*!/*/
     /*}*/
@@ -123,6 +186,14 @@ div.row>div.col-lg-2>ul>li>a{
     .bg_text{
         display:none;
     }
+    #index_carousel>ul{
+        display:none;
+    }
+    #index_carousel>a{
+        width:8%;
+        height:35%;
+        top:36%;
+    }
 }
 @media screen and (max-width:1100px){
     .bg_text {
@@ -130,12 +201,47 @@ div.row>div.col-lg-2>ul>li>a{
     }
 }
 /*主页主体内容样式*/
+
 .img_box{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+section>.container>.row>.col-6>a>div{
+    display:inline-block;
+    width: 84px;
+    height: 84px;
+    border:1px solid #e6e6e6;
+    border-radius:50%;
+    margin-bottom:5px;
+}
+section>.container>.row>.col-6>a>div:after{
+    content:"";
+    display:inline-block;
+    height:84px;
+    vertical-align: middle;
+}
+section>.container>.row>.col-6>a>div>img{
+    vertical-align:middle;
+}
 @media screen and (min-width:991px){
+    section{
+        width: 100%;
+        position:absolute;
+        top:825px;
+    }
+    section>div:first-child{
+        background:#fafafa;
+        border-bottom:1px solid #e6e6e6;
+    }
+    section>div:first-child>.container>.row{
+        height: 110px;
+    }
+    footer{
+        width:100%;
+        position:absolute;
+        top:1350px;
+    }
     .img_box{
         width:20%;
         height:70px;
@@ -150,7 +256,7 @@ div.row>div.col-lg-2>ul>li>a{
         background-image:url("../img/index-nav-icon2.jpg")
     }
     .my_section_pic4{
-       height: 40px; margin-top: 15px;
+       height: 40px;
         background-image:url("../img/index-nav-icon3.jpg")
     }
     div.text_box{
@@ -166,7 +272,6 @@ div.row>div.col-lg-2>ul>li>a{
     div.text_box>p:nth-child(2){
         color:#555;
         font-size: 18px;
-        padding-top:10px;
     }
     .only_border{
         border-left:1px solid #eee;
