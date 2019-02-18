@@ -1,5 +1,6 @@
 <template>
     <div>
+        <mar-header></mar-header>
         <!--服务页主体内容-start-->
         <section class="container">
             <hr class="d-lg-block d-none mt-2"/>
@@ -187,6 +188,7 @@
             </div>
         </section>
         <!--服务页主体内容-end-->
+        <mar-footer></mar-footer>
     </div>
 </template>
 
@@ -194,6 +196,14 @@
 export default {
     data(){
         return {}
+    },
+    methods:{
+        menu(){
+            window.scrollTo(0,0)
+        }
+    },
+    created(){
+        this.menu()
     }
 }
 </script>

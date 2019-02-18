@@ -1,7 +1,7 @@
 <template>
     <div>
-        <section style="background: url('http://www.marssenger.com/upload/2018/04/17/15239550621432o51og.jpg') no-repeat;background-size:cover">
-            <div class="">
+        <div id='particles-js' >
+            <!-- <div class="" >
                 <table style="border-collapse: separate;border-spacing: 5px 10px;">
                 <tr>
                     <th colspan="2" class="font_24">用户注册</th>
@@ -24,24 +24,43 @@
                     </th>
                 </tr>
                 </table>
-            </div>
-        </section>
+            </div> -->
+        </div>
     </div>
 </template>
 
 <script>
+import particles from 'particles.js'
 export default {
     data(){
         return {}
+    },
+    methods:{
+        menu(){
+            window.scrollTo(0,0)
+        }
+    },
+    created(){
+        this.menu()
+    },
+    mounted(){
+        particlesJS.load('particles-js', '@/assets/particle/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
     }
 }
 </script>
 
 <style scoped>
     @import '../../assets/css/basic.css';
-    section{
-        width:100%;
-        /*margin-top: 20px;*/
+    #particles-js{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
     }
     section>div{
         background-color:rgba(200,200,200,0.3)!important;
@@ -59,12 +78,6 @@ export default {
         border:1px  solid  #3e280c;
     }
     @media screen and (min-width:991px){
-        section{
-            position:absolute;
-            left:0;top:0;
-            z-index:-1;
-            height:900px
-        }
         section>div{
             border-radius: 20px;
             width:500px;
@@ -87,10 +100,6 @@ export default {
         }
     }
     @media screen and (max-width:990px){
-        section{
-            height:400px;
-            position: relative;
-        }
         section>div{
             width:100%;
             height: 250px;
